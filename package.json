@@ -3,11 +3,6 @@
   "version": "1.0.0",
   "description": "Design token system for App Checador — web and native adapters",
   "license": "UNLICENSED",
-  "exports": {
-    "./web": "./tokens.web.ts",
-    "./native": "./tokens.native.ts",
-    "./types": "./tokens.types.ts"
-  },
   "files": [
     "tokens.json",
     "tokens.types.ts",
