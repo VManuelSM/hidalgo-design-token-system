@@ -1,21 +1,19 @@
-import tokens from './tokens.json';
+import type { RawTokens } from './tokens.types';
+import rawTokens from './tokens.json';
 
-/**
- * Utilidad para limpiar el 'px' y convertirlo a número (React Native no usa 'px')
- */
+const tokens = rawTokens as unknown as RawTokens;
+
 const parsePx = (pxStr: string): number => {
   return parseInt(pxStr.replace('px', ''), 10);
 };
 
-/**
- * Adaptación de tokens para entornos Móviles (React Native / Expo)
- */
 export const tokensNative = {
   colors: {
     brand: tokens.brand,
     status: tokens.semantic.status,
     alert: tokens.semantic.alert,
     neutral: tokens.neutral,
+    surface: tokens.surface,
   },
   typography: {
     family: tokens.typography.family.main,
@@ -37,7 +35,7 @@ export const tokensNative = {
     md: parsePx(tokens.radius.md),
     lg: parsePx(tokens.radius.lg),
     xl: parsePx(tokens.radius.xl),
-    full: 9999,
+    full: parsePx(tokens.radius.full),
   },
   spacing: {
     1: parsePx(tokens.spacing['1']),
@@ -51,8 +49,6 @@ export const tokensNative = {
     12: parsePx(tokens.spacing['12']),
     16: parsePx(tokens.spacing['16']),
   },
-  // En Native, las sombras varían por plataforma; exportamos elevación base
   elevation: tokens.elevation,
-  // Z-index en Native
   zIndex: tokens.depth,
 };
