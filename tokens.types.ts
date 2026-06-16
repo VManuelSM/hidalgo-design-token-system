@@ -12,6 +12,7 @@ export interface StatusTokens {
   faltaSalida: string;
   comision: string;
   ausencia: string;
+  justificado: string;
 }
 
 export interface AlertColorTokens {
