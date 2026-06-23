@@ -14,6 +14,9 @@ export const tokensNative = {
     alert: tokens.semantic.alert,
     neutral: tokens.neutral,
     surface: tokens.surface,
+    text: tokens.text,
+    border: tokens.border,
+    action: tokens.action,
   },
   typography: {
     family: tokens.typography.family.main,
@@ -51,4 +54,25 @@ export const tokensNative = {
   },
   elevation: tokens.elevation,
   zIndex: tokens.depth,
+  opacity: {
+    0: Number(tokens.opacity['0']),
+    25: Number(tokens.opacity['25']),
+    50: Number(tokens.opacity['50']),
+    75: Number(tokens.opacity['75']),
+    100: Number(tokens.opacity['100']),
+  },
+  icon: {
+    sm: parsePx(tokens.icon.sm),
+    md: parsePx(tokens.icon.md),
+    lg: parsePx(tokens.icon.lg),
+    xl: parsePx(tokens.icon.xl),
+  },
+  transition: {
+    duration: {
+      fast: parseInt(tokens.transition.duration.fast.replace('ms', ''), 10),
+      normal: parseInt(tokens.transition.duration.normal.replace('ms', ''), 10),
+      slow: parseInt(tokens.transition.duration.slow.replace('ms', ''), 10),
+    },
+    easing: tokens.transition.easing,
+  },
 };

@@ -1,6 +1,8 @@
-# Design Token System — App Checador
-
-Fuente de verdad ("Single Source of Truth") para el diseño visual de la **App Checador**. Centraliza colores, tipografía, espaciados y reglas de UI para garantizar una experiencia consistente entre el portal web y la aplicación móvil.
+| | |
+| --- | --- |
+| ![Hidalgo Logo](https://cmsportal.hidalgo.gob.mx/uploads/Estrella_header_3be093aaf9.svg) |  **UPLAPH - COEMERE - DGT Design Token System** |
+# UPLAPH - COEMERE - DGT Design Token System
+Marco de referencia visual para los proyectos desarrollados en la **Dirección de Gestión Tecnológica de la COEMERE de la UPLAPH**. Centraliza colores, tipografía, espaciados y reglas de UI para garantizar una experiencia consistente en todas las aplicaciones de la dependencia.
 
 ## Colores Institucionales
 

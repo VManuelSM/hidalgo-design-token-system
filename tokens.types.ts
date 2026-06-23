@@ -5,14 +5,14 @@ export interface BrandTokens {
 }
 
 export interface StatusTokens {
-  puntual: string;
-  tolerancia: string;
-  retardo: string;
-  falta: string;
-  faltaSalida: string;
-  comision: string;
-  ausencia: string;
-  justificado: string;
+  active: string;
+  processing: string;
+  pending: string;
+  failed: string;
+  attention: string;
+  highlight: string;
+  inactive: string;
+  completed: string;
 }
 
 export interface AlertColorTokens {
@@ -50,6 +50,33 @@ export interface NeutralTokens {
   white: string;
   gray: Record<'50' | '100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900', string>;
   black: string;
+}
+
+export interface TextTokens {
+  primary: string;
+  secondary: string;
+  muted: string;
+  disabled: string;
+  inverse: string;
+  brand: string;
+}
+
+export interface BorderTokens {
+  default: string;
+  hover: string;
+  focus: string;
+  disabled: string;
+  error: string;
+  success: string;
+}
+
+export interface ActionTokens {
+  primary: string;
+  primaryHover: string;
+  secondary: string;
+  secondaryHover: string;
+  disabled: string;
+  disabledText: string;
 }
 
 export interface TypographyTokens {
@@ -102,6 +129,36 @@ export interface DepthTokens {
   tooltip: number;
 }
 
+export interface OpacityTokens {
+  '0': string;
+  '25': string;
+  '50': string;
+  '75': string;
+  '100': string;
+}
+
+export interface IconSizeTokens {
+  sm: string;
+  md: string;
+  lg: string;
+  xl: string;
+}
+
+export interface TransitionTokens {
+  duration: {
+    fast: string;
+    normal: string;
+    slow: string;
+  };
+  easing: {
+    linear: string;
+    ease: string;
+    in: string;
+    out: string;
+    inOut: string;
+  };
+}
+
 export interface RawTokens {
   brand: BrandTokens;
   semantic: {
@@ -110,6 +167,9 @@ export interface RawTokens {
   };
   neutral: NeutralTokens;
   surface: SurfaceTokens;
+  text: TextTokens;
+  border: BorderTokens;
+  action: ActionTokens;
   typography: TypographyTokens;
   radius: RadiusTokens;
   spacing: SpacingTokens;
@@ -117,4 +177,7 @@ export interface RawTokens {
   shadow: ShadowTokens;
   elevation: ElevationTokens;
   depth: DepthTokens;
+  opacity: OpacityTokens;
+  icon: IconSizeTokens;
+  transition: TransitionTokens;
 }
